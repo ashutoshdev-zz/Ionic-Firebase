@@ -1,0 +1,80 @@
+<ion-view>
+    <ion-nav-bar class="bar-dark single_header">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons class="right_side_button">
+            <button class="button" id="right_btn">
+                Next <i class="icon ion-ios-arrow-forward"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content ng-controller="hotel_detail">
+        <!--<button ng-click="nextSlide()">Next slide!</button>
+<button ng-click="previousSlide()">PREvslide!</button>-->
+        <div class="hotel_slider">
+            <ion-slide-box>
+                <ion-slide ng-repeat="x in img_list track by $index">
+                    <div class="box blue">
+                        <img src="http://codeandcore.com/ourwork/treverse/src/js/controllers/uploads/hotel/{{x}}" alt="">
+                    </div>
+                </ion-slide>
+                <!--<ion-slide>
+                    <div class="box red">
+                        <img src="img/hotel_1.jpg" alt="">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box red">
+                        <img src="img/hotel_1.jpg" alt="">
+                    </div>
+                </ion-slide>-->
+            </ion-slide-box>
+        </div>
+        <div class="hotel_detail">
+            <div class="top_sec">
+                <div class="left_detail">
+                    <h3>{{hotel_detail.Name}}</h3>
+                    <p>{{hotel_detail.City}},{{hotel_detail.State}} <strong>{{dis}} mi</strong></p>
+                </div>
+                <div class="right_ratting">
+                    <rating ng-model="hotel_detail.Rating" max="5"></rating>
+                </div>
+            </div>
+            <div class="bottom_sec">
+                <p>{{hotel_detail.Address1}}</p>
+            </div>
+        </div>
+        <div id="map">
+            <ng-map center="{{hotel_detail.Latitude}}, {{hotel_detail.Longitude}}" zoom="15" tilt="45" disable-default-u-i="true" id="custom">
+                <custom-marker position="{{hotel_detail.Latitude}}, {{hotel_detail.Longitude}}">
+                    <img src="img/map_pin.png" alt="" width="36px" height="50px">
+                </custom-marker>
+            </ng-map>
+            <div class="top_shadow"></div>
+        </div>
+        <div class="tab_sec">
+            <div class="tab_list">
+                <a href="javascript:void(0)" class="active">Hotel</a><a href="javascript:void(0)">Room</a>
+                <div class="clear"></div>
+            </div>
+            <div class="tab_sys">
+                <div class="tab_list active">
+                    <h3>DESCRIPTION</h3>
+                    <p>{{hotel_detail.h_dec}} </p>
+                    <h3>Amenities</h3>
+                    <ul>
+                        <li ng-repeat="x in icon_hot track by $index"><img src="http://codeandcore.com/ourwork/treverse/src/js/controllers/uploads/small_icon/{{x}}.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="tab_list">
+                    <h3>DESCRIPTION</h3>
+                    <p>{{hotel_detail.r_dec}}</p>
+                    <h3>Amenities</h3>
+                    <ul>
+                        <li ng-repeat="x in icon_room track by $index"><img src="http://codeandcore.com/ourwork/treverse/src/js/controllers/uploads/small_icon/{{x}}.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

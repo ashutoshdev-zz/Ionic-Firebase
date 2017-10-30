@@ -1,0 +1,60 @@
+<ion-view view-title="User Dashboard" ng-controller="dashbord">
+    <form name="myForm">
+        <ion-item class="title_custom">
+            <h2>treverse</h2>
+            <h1>My Bookings</h1>
+            <p>Hi, {{dash_name}}</p>
+        </ion-item>
+        <ion-content class="dark_bg user_dashboard">
+            <ion-item class="dummy_bar"></ion-item>
+            <ion-list class="offer">
+                <div ng-repeat="hotel in user_ls | filter:{ user_id : user_log, archive:true} | orderBy:'-$id':True">
+                    <ion-item class="accepted bdr_list" ng-if="hotel.reject != true" ><!--ng-repeat="(key, hotel) in hotel" ng-if="key == id-1"-->
+                        <div class="top_sec">
+                            <h2>BOOKING STATUS: <span>GUARANTEED</span></h2>
+                        </div>
+                        <div class="bottom_confo">
+                            <p>OFFER CONFIRMATION #: <strong>{{hotel.conformation}}</strong></p>
+                            <p>HOTEL CONFIRMATION #: <strong><span>{{hotel.hotel_confo || "PENDING"}}</span></strong></p>
+                        </div>
+                        <div class="detail">
+                            <p>
+                                <em>Hotel Name:</em><span>{{hotel.Name}}</span>
+                            </p>
+                            <div class="more_detail">
+                                <p><em>Offer Total:</em><span><b>${{hotel.ammount}}</b></span></p>
+                                <p><em>Per Day:</em><span><b ng-init="itemTotal = hotel.ammount /hotel.night">${{itemTotal}}</b></span></p>
+                                <p><em>Check-In Date:</em><span>{{hotel.Arrival*1000 | date:'EEEE, MMM d'}}</span></p>
+                                <p><em>Check-Out Date:</em><span>{{hotel.cod*1000 | date:'EEEE, MMM d'}}</span></p>
+                                <p ng-if="hotel.hotel_confo == ''"><em># of Rooms</em><span>{{hotel.room}}</span></p>
+                                <p><em># of Guests:</em><span>{{hotel.guest}}</span></p>
+                                <p><em># of Beds:</em><span>{{hotel.bed}}</span></p>
+                                <p><em>Address:</em><span>{{hotel.address}}<br>{{hotel.city}},{{hotel.State}}</span></p>
+                            </div>
+                            <div ng-if="hotel.hotel_confo == ''">
+                                <p class="thanx_msg">Thank you, Manny! Your hotel has been booked.
+                                    Please show your confirmation number at Check-In. </p>
+                                <h5 class="ger">To Guarantee your Stay*</h5>
+                            </div>
+                            <div class="more_detail">
+                                <div ng-if="hotel.hotel_confo != ''">
+                                    <a class="dir_btn map_open" data-maps="http://maps.google.com/maps?q=loc:{{hotel.Latitude}},{{hotel.Longitude}}" href="javascript:void(0)">Directions</a>
+                                </div>
+                                <div ng-if="hotel.hotel_confo == ''">
+                                    <a class="dir_btn map_open" href="tel:{{hotel.Phone}}">Guarantee Booking Now</a>
+                                </div>
+                            </div>
+                            <div ng-if="hotel.hotel_confo == ''">
+                                <p class="small_font">*If Offer is not guaranteed by Guest, your offer and room will be cancelled at 6pm on the date of arrival.</p>
+                            </div>
+                            <div class="other_detail">
+                            </div>
+                            <a href="javascript:void(0)" class="show_more"><label>Show More</label> <img src="img/arrow_btn.png" alt=""></a>
+                        </div>
+                        <ion-option-button class="button-positive icon ion-android-archive" data-id="{{hotel.$id}}" ng-click="archive(hotel.$id)"></ion-option-button> 
+                    </ion-item>
+                </div>
+            </ion-list>
+        </ion-content>
+    </form>
+</ion-view>

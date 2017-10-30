@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "G:/ionic_app/ionic_app/HotelApp/app/www/js/app.js",
+        "/Volumes/Shivang/Projects/ionic_app/HotelApp/app/www/lib/ng-cordova-oauth/src/oauth.azuread.js",
+        "/Volumes/Shivang/Projects/ionic_app/HotelApp/app/www/lib/ng-cordova-oauth/src/oauth.familySearch.js"
+    ]
+}

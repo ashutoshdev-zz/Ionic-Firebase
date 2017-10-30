@@ -1,0 +1,244 @@
+<ion-view view-title="{{user_name || 'My Account'}}" ng-controller="checkval2">
+    <ion-item class="loading_pop">
+        <div class="move">
+            <div class="load"></div>
+            <img src="img/glass.png" alt="">
+        </div>
+        <div class="bottom_img">
+            <img src="img/loading_txt.png" alt="">
+        </div>
+    </ion-item>
+    <ion-item class="red_popup hide">
+        <div class="popup">
+            <h2 class="logo_txt">treverse</h2>
+            <div class="top_sec">
+                <h3>HOTELS ARE WAITING</h3>
+                <h3>FOR YOUR OFFER!</h3>
+                <p>All Hotel Offers must be sent from a registered account in order to review for <approval class=""></approval></p>
+                <img src="../img/thumb_img.jpg" alt="">
+            </div>
+            <div class="btn_section">
+                <a href="#/app/registration" class="popup_btn">Create Account</a>
+                <a href="#/app/signin" class="popup_btn" ng-click="change_state()">Sign In</a>
+                <a href="javascript:void(0)" class="g_back">Go Back to Results</a>
+            </div>
+        </div>
+    </ion-item>
+    <ion-item class="offer_popup hide">
+        <div class="popup">
+            <div class="top_part">
+                <p>treverse</p>
+                <div class="pop_up_title">
+                    <p>OFFER SUBMITTED</p>
+                </div>
+                <h5>BOOKING STATUS: PENDING</h5>
+                <h3><b>{{values}}</b> Hotels in</h3>
+                <h4>{{cites_2}} {{cites}}</h4>
+            </div>
+            <div class="mid_part">
+                <div class="left_txt">
+                    <p>Total Offer Amount
+                        <span>before taxes and hotel fees.</span>
+                    </p>
+                    <p>Per Night, Per Room</p>
+                </div>
+                <div class="right_txt">
+                    <div class="sub_total">
+                        <h3>$<b>92</b></h3>
+                    </div>
+                    <div class="per_night">
+                        <h3>$<b>92</b></h3>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="bottom_part">
+                <img src="img/thumb_img.jpg" alt="">
+                <p>talking to the front desk...</p>
+                <h3 id="countTime"></h3>
+            </div>
+        </div>
+    </ion-item>
+    <ion-item class="success_popup hide">
+        <div class="popup">
+            <div class="close"><a href="#/app/home"><img src="img/close.png" alt=""></a></div>
+            <div class="top_part">
+                <p>treverse</p>
+                <div class="title_sec">
+                    <h5>OFFER ACCEPTED</h5>
+                </div>
+                <!--<p>Welcome, {{user_name}}!
+This Hotel chose you...
+</p>-->
+            </div>
+            <div class="mid_part">
+                <!--background-image:url(http://codeandcore.com/ourwork/treverse/src/js/controllers/uploads/hotel/{{l_data.DisplayImage}});-->
+                <!--<img src="http://codeandcore.com/ourwork/treverse/src/js/controllers/uploads/icons/{{l_data.icons}}" alt="">-->
+                <div class="top_detail">
+                    <!--<p>BOOKING STATUS: PENDING</p>-->
+                    <h4>OFFER CONFIRMATION #: {{test_data.booking_id}}</h4>
+                    <h4>HOTEL CONFIRMATION #: PENDING...</h4>
+                </div>
+                <div class="details">
+                    <h3><em>Hotel Name:</em><span>{{l_data.Name}}</span></h3>
+                    <h3><em>Offer Total:</em><span>${{test_data.ammount | number:2}}</span></h3>
+                    <h3><em>Per Day:</em><span>${{test_data.ammount/test_data.night | number:2}}</span></h3>
+                    <h3><em>Check-In Date:</em><span>{{test_data.Arrival*1000 | date:'EEEE, MMM d'}}</span></h3>
+                    <h3><em>Check-Out Date:</em><span>{{test_data.cod*1000 | date:'EEEE, MMM d'}}</span></h3>
+                    <h3><em># of Guests:</em><span>{{test_data.guest}}</span></h3>
+                    <h3><em># of Beds:</em><span>{{test_data.bed}}</span></h3>
+                    <h3><em>Address:</em><span>{{l_data.Address1}}</span></h3>
+                    <h3><em>Directions:</em><span><a href="javascript:void(0)" class="map_open" data-maps = "https://www.google.com/maps/preview/@{{l_data.Latitude}},{{l_data.Longitude}},10z">Go to Map</a></span></h3>
+                </div>
+                <!--<h3>{{l_data.Name}},{{l_data.state}}
+accepted your offer of 
+$<span class="succ_price">92</span> total offer amount <br>{{user_req}}</h3>-->
+            </div>
+            <div class="bottom_part">
+                <p>You will receive a phone call from the Hotel 
+                    to Guarantee your Stay*, or call now to complete 
+                    booking securely at <a href="javascript:void(0)">{{l_data.Phone}}</a></p>
+                <h6>*If Offer is not guaranteed by Hotel, your offer and room will be cancelled at 6pm on the date of arrival.</h6>
+                <a href="javascript:void(0)" class="go_to gt_btn">Go to My Bookings</a>
+            </div>
+        </div>
+    </ion-item>
+    <ion-item class="fail_popup hide">
+        <!--<div class="popup">
+<div class="top_part">
+<h3>Sorry, Offer Timed Out. <br>Please Try Again!</h3>
+</div>
+<div class="mid_part_fail">
+<p>The {{values}} Hotels you selected
+would not accept <br>
+the offer of $<span class="pric_fail">92</span> total offer amount <br/>{{user_req}}</p>
+<a class="make_another">Make Another Offer!</a>
+</div>
+<div class="bottom_part">                
+<a href="#/app/home" class="go_to"><img src="img/search_again.png" alt=""></a>
+</div>
+</div>-->
+        <div class="popup hide">
+            <!--<div class="close"><a href="#/app/home"><img src="img/close.png" alt=""></a></div>-->
+            <div class="top_part">
+                <p>treverse</p>
+                <div class="title_sec">
+                    <h5>OFFER DECLINED</h5>
+                </div>
+                <h4>BOOKING STATUS: DECLINED</h4>
+                <h3>Sorry, Offer Timed Out.<br> Please Try Again!</h3>
+            </div>
+            <div class="mid_part_fail">
+                <div class="detail">
+                    <p><em>Hotels:</em><span>{{values}}</span></p>
+                    <p><em>Offer Total:</em><span>${{test_data.ammount | number:2}}</span></p>
+                    <p><em>Per Day:</em><span>${{test_data.ammount/test_data.night | number:2}}</span></p>
+                    <p><em>Check-In Date:</em><span>{{test_data.Arrival*1000 | date:'EEEE, MMM d'}}</span></p>
+                    <p><em>Check-Out Date:</em><span>{{test_data.cod*1000 | date:'EEEE, MMM d'}}</span></p>
+                    <p><em># of Guests:</em><span>{{test_data.bed}}</span></p>
+                    <p><em># of Beds:</em><span>{{test_data.bed}}</span></p>
+                </div>
+                <!--<p>The {{values}} Hotels you selected
+would not accept <br>
+the offer of $<span class="pric_fail_data">92</span> per night.</p>-->
+                <a class="make_another full_width">Make Another Offer</a>
+            </div>
+            <div class="bottom_part">                
+                <a href="#/app/home" class="small_btn" ng-click="erase_his()">Search Again</a>
+            </div>
+        </div>
+    </ion-item>
+    <ion-item class="sorry hide">
+        <div class="popup">
+            <div class="close"><a href="#/app/home" ng-click="erase_his()"><img src="img/close.png" alt=""></a></div>
+            <div class="top_part">
+                <p>treverse</p>
+                <div class="title_sec">
+                    <h5>OFFER DECLINED</h5>
+                </div>
+                <h4>BOOKING STATUS: DECLINED</h4>
+                <h3>Sorry, Offer Not Accepted.<br> Please Try Again!</h3>
+            </div>
+            <div class="mid_part_fail">
+                <div class="detail">
+                    <p><em>Hotels:</em><span>{{values}}</span></p>
+                    <p><em>Offer Total:</em><span>${{amount_ | number:2}}</span></p>
+                    <p><em>Per Day:</em><span>${{per_day | number:2}}</span></p>
+                    <p><em>Check-In Date:</em><span>{{cid*1000 | date:'EEEE, MMM d'}}</span></p>
+                    <p><em>Check-Out Date:</em><span>{{cod*1000 | date:'EEEE, MMM d'}}</span></p>
+                    <p><em># of Guests:</em><span>{{guest}}</span></p>
+                    <p><em># of Beds:</em><span>{{beds}}</span></p>
+                </div>
+                <!--<p>The {{values}} Hotels you selected
+would not accept <br>
+the offer of $<span class="pric_fail_data">92</span> per night.</p>-->
+                <a class="make_another">Make Another Offer</a>
+            </div>
+            <div class="bottom_part">                
+                <a href="#/app/home" class="small_btn" ng-click="erase_his()">Search Again</a>
+            </div>
+        </div>
+    </ion-item>
+    <ion-content class="hotel_list main_top">
+        <div class="top_section cf">
+            <div class="left_sec" >
+                <p><i><span>{{values}}</span> Hotels</i> <input type="hidden" id="hotel_num" value="{{values}}"></p>
+            </div>
+            <div class="right_sec">
+                <p><ion-checkbox ng-model="isChecked" ng-change="change()" class="check_btn"></ion-checkbox></p><p>Select All</p>
+            </div>
+        </div>
+        <div ng-if="cites != null">
+            <ion-list class="inner_list top_list" ng-controller="yourCtrl" ng-repeat="x in test | filter:{State:cites,City:cites_2,archive:false}" ng-show="(dates_1 <= x.fromdate && dates_2 <= x.fromdate) || (dates_1 >=x.todate && dates_2 >= x.todate)" ng-if="(x.Rating>=rate) && (x.disable != true)">
+                <div class="load_img">
+                    <ion-checkbox ng-model="isChecked" ng-change="change()" id="{{x.h_id}}" class="check_btn">SELECTED -</ion-checkbox>
+                    <a href="#/app/hoteldetail" id="hot_id" data-h_id="{{x.h_id}}" data-mobile={{x.Phone}}>
+                        <img ng-src="http://codeandcore.com/ourwork/treverse/src/js/controllers/uploads/hotel/{{x.DisplayImage}}" alt="">
+                        <div class="detail">
+                            <div class="left_section">
+                                <h3 class="names">{{ x.Name }}</h3>
+                                <p ng-init="initTo = init(x.Latitude,x.Longitude)">{{dis}} mi</p><rating ng-model="x.Rating" max="rating.max"></rating>
+                            </div>
+                            <div class="right_section">
+                                <img src="http://codeandcore.com/ourwork/treverse/src/js/controllers/uploads/icons/{{x.icons}}" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ion-list>
+            <ion-list class="inner_list with_mile" ng-if="(test | filter:{State:cites,City:cites_2,archive:false}).length==0" ng-repeat="x in test | filter:{archive:false}"  ng-init="initTo = init(x.Latitude,x.Longitude)" ng-show="(dates_1 <= x.fromdate && dates_2 <= x.fromdate) || (dates_1 >=x.todate && dates_2 >= x.todate) && (x.disable != true)" ng-controller="city_lat">
+                <div ng-if="dis <= 25" class="red_list">
+                    <ion-checkbox ng-model="isChecked" ng-change="change()" id="{{x.h_id}}" class="check_btn">SELECTED -</ion-checkbox>
+                    <a href="#/app/hoteldetail" id="hot_id" data-h_id="{{x.h_id}}" data-mobile={{x.Phone}}>
+                        <img ng-src="http://codeandcore.com/ourwork/treverse/src/js/controllers/uploads/hotel/{{x.DisplayImage}}" alt="">
+                        <div class="detail">
+                            <div class="left_section">
+                                <h3 class="names">{{ x.Name }}</h3>
+                                <p ng-init="initTo = init(x.Latitude,x.Longitude)">{{dis}} mi</p><rating ng-model="rating.rate" max="{{x.Rating}}"></rating>
+                            </div>
+                            <div class="right_section">
+                                <img src="http://codeandcore.com/ourwork/treverse/src/js/controllers/uploads/icons/{{x.icons}}" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ion-list>
+        </div>
+        <span class="inner_list"></span>
+        <p class="null_val">
+            Sorry, No Hotels within 25 miles, Try Another Search
+        </p>
+    </ion-content>
+    <div class="bot_fix">
+        <div class="top_bottom">
+            <div class="left_sec">
+                <p>I can spend</p>
+            </div>
+            <div class="right_sec">
+                <input type="number" ng-model="price" step='0.01' value='0.00' step="0.01"> <span>for {{night || No-date}} nights</span> 
+            </div>
+            <div class="clear"></div>
+        </div>
+        <a href="javascript:void(0)" ng-click="sent()" class="btn show_pop">GO GET IT!</a>
+    </div>
+</ion-view>

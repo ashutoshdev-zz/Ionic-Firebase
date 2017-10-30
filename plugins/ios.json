@@ -1,0 +1,44 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.jcjee.plugins.emailcomposer": {
+            "PACKAGE_NAME": "com.hotelapp.app"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.hotelapp.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.hotelapp.app"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.hotelapp.app"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.hotelapp.app"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.hotelapp.app"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.hotelapp.app"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.hotelapp.app"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.hotelapp.app"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.hotelapp.app"
+        }
+    }
+}

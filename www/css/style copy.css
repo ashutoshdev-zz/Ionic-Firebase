@@ -1,0 +1,318 @@
+/* 1. Create a Clean Base
+------------------------------------------------------------------------------*/
+
+/* Class for clearing floats */
+.clear {clear:both; display:block; overflow:hidden; visibility:hidden; width:0; height:0;}
+.cf:after,.cf:before{display: table;content: ''}
+.cf:after{clear: both;}
+*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+*:before,*:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.fleft{float: left;}
+
+/* 2. Define Base Typography
+------------------------------------------------------------------------------*/
+
+/* Create the Default Headers  */
+h1, h2, h3, h4, h5, h6 {}
+
+/* Create the Default Paragraphs */
+p { color: #fff; font-size: 16px; line-height: 24px;}
+
+
+/* Specific Header Settings */
+h1 {font-size:34px; color:#fff; }
+h2 {font-size:20px; color:#fff; font-weight: 300;}
+h3 {font-size:15px; color:#000;}
+h4 {font-size:14px; color:#fff; font-weight: 300;}
+h5 {font-size:12px; color:#fff; font-weight: 300;}
+h6 {font-size:12px; color:#fff; font-weight: 300;}
+
+
+/* Other Typo */
+strong {font-weight: bold;}
+hr {border:0 #000 solid; border-top-width: 1px; clear: both; height: 0;}
+ol {list-style: decimal;}
+ul {list-style: disc;}
+
+/* 3. Images
+------------------------------------------------------------------------------*/
+
+/* Remove border around linked images */
+img {border: 0; border-style: none; max-width: 100%;}
+
+/* 4. Links
+------------------------------------------------------------------------------*/
+
+/* Default Link Types */
+a {color: #fff; font-size: 16px; text-decoration:none;}
+a:hover {text-decoration:none}
+a:active {}
+a:focus {outline: none;}
+a.current{color: #e8941a;}
+
+
+/* 5. Forms
+------------------------------------------------------------------------------*/
+
+input[type='submit']{ -webkit-appearance:none; border:none; -webkit-text-size-adjust:none; background-color: #2c5874; border: 1px solid #1f4d6a; font-size: 17px; color: #fff; width: 100%; display: inline-block; height: 40px;}
+input[type='text'],input[type='search'],input[type='month'],input[type='password'],input[type='email'],input[type='number']{background: none !important; display: inline-block; vertical-align: top; border-bottom: 1px solid #f1f1f1; color: #fff; margin-bottom: 10px; border-radius: 0 !important}
+.col_3 button{background: none !important; border: none !important; border-radius: 0 !important}
+::-webkit-placeholder { 
+    color: #ffffff;
+}
+:-webkit-placeholder { 
+    color: #ffffff;
+}
+
+
+fieldset {border: 1px solid transparent;}
+
+/* 6. Tables
+------------------------------------------------------------------------------*/
+
+/* Table Fixes */
+table {border-spacing: 0; border-collapse: collapse;}
+td {text-align: left; font-weight: normal;}
+
+
+/* Removes fieldset borders. even on Opera 7 */
+fieldset {border: 1px solid transparent;}
+
+
+/* 7. Framework
+------------------------------------------------------------------------------*/
+
+/* Home Page  */
+.dark_bg{background-color: #262626;}
+.bar.bar-dark{background: #0e0e0e;}
+.bar.bar-dark .title{font-weight: 300;}
+.home .banner{height: 280px; padding: 0; position: relative; overflow: visible}
+.home .banner .bg_banner{height: 280px; padding: 0; position: relative; overflow: hidden; border-bottom: 1px solid #ffffff;}
+.home .banner .icon{position: absolute; left: 0; right: 0; margin: 0 auto; bottom: -50px; text-align: center;}
+.home .banner .icon img{width: 100px;}
+.home .item{background: none; border: none}
+.home .bottom_sec{padding-top: 71px; width: 80%; margin: 0 auto}
+.home .bottom_sec img{width: 25px; margin-right: 17px;}
+.home .bottom_sec .col_1{width: 100%; text-align: center; }
+.home .bottom_sec .col_3{width: 40%; text-align: center; display: inline-block; vertical-align: top; border-bottom: 1px solid #fff; float: left; padding-bottom: 8px; position: relative;}
+.home .bottom_sec .col_3 button ,.home .bottom_sec .col_3 label{color: #fff;}
+.home .bottom_sec .col_3 input[type="button"]{color: #fff; background: none !important; border-radius: 0 !important ; border: none !important}
+.home .bottom_sec .col_3 button.from_btn:after{position: absolute; content: '-'; right: 0; top: 0;}
+.home .bottom_sec .list{margin-bottom: 30px;}
+.home .bottom_sec .star_list {width: 70%; display: inline-block; text-align: center;}
+.home .bottom_sec .last_img{display: inline-block; vertical-align: top; position: relative; top: 25px;}
+.home .bottom_sec .star_list ul{list-style: none;}
+.home .bottom_sec .star_list ul li{display: inline-block; font-size: 35px; padding: 0 5px;}
+.ion-ios-star-outline:before ,.ion-ios-star:before,.ion-ios-star-half:before{color: #ad01a6;}
+.home .bottom_sec .star_list p{color: #fff}
+.btn{position: fixed; width: 100%; height: 55px; bottom: 0; text-align: center; background-color: #ad01a6; font-size: 35px; font-weight: 200; z-index: 999; line-height: 50px; outline: none; border: none; color: #fff}
+
+.inner_list .list{position: relative; min-height: 150px; padding: 0;}
+.inner_list .list img{display: block;}
+.inner_list .detail{position: absolute; width: 100%; min-height: 50px; background: rgba(0,0,0,0.7); bottom: 10px; padding: 5px;}
+.inner_list .detail .left_section{float: left; width: 70%;}
+.inner_list .detail .left_section h3{color: #fff; line-height: normal; margin-bottom: 0; font-size: 14px;}
+.inner_list .detail .left_section p{line-height: normal; margin-bottom: 0; display: inline-block; width:19%; font-size: 14px;}
+.inner_list .detail .left_section ul{display: inline-block; width: 80%; list-style: none; vertical-align: top;}
+.inner_list .detail .left_section ul li{display: inline-block; vertical-align: top;}
+.inner_list .detail .left_section ul li i{font-size: 22px;}
+.inner_list .detail .right_section{float: left; width: 30%;}
+.inner_list .detail .right_section img{margin: 0 auto;display: block; height: 37px;}
+.inner_list .detail .ion-ios-star-outline:before{ content: ""; color: #fff}
+.inner_list .check_btn{position: absolute; right: 0px; top: 15px; background: none; border: none; padding: 21px;}
+.inner_list .item-checkbox .checkbox{left: initial;}
+.inner_list .item-checkbox .item-content {margin-right: 20px; font-weight: bold; color: #fff;}
+.inner_list .item-checkbox .item-content{opacity: 0; visibility: hidden;}
+.inner_list .item-checkbox.checked .item-content{opacity: 1; visibility: visible;}
+
+
+.check_btn .checkbox-icon:before{border-radius: 8px;}
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before{border-radius: 50%; background: #ad01a6; border-color: #fff}
+.top_section .check_btn .checkbox input:checked:before,.top_section .check_btn .checkbox input:checked + .checkbox-icon:before{border-radius: 8px; background: #fff; border-color: #fff}
+.top_section .checkbox input:after,.top_section .checkbox-icon:after{border: 2px solid #000; border-top: 0;border-right: 0;}
+.pb60{padding-bottom: 30px;}
+.anim{opacity: 0; -webkit-transition: 0.4s ease all; transition: 0.4s ease all;}
+.anim.show{opacity: 1;}
+.top_section {background-color: #333333; padding: 5px;}
+.top_section .left_sec{width: 65%; float: left;}
+.top_section .left_sec p{font-style: italic;  margin: 0;}
+.top_section .right_sec{width: 35%; float: left; text-align: right;}
+.top_section .right_sec p{display: inline-block; vertical-align: middle;  margin: 0;}
+.top_section .check_btn{padding: 21px; background: none; border: none; padding: 0; width: 48px;height: 34px;}
+.item-checkbox .checkbox{right: inherit;}
+.main_top{margin-bottom: 100px;}
+
+.bot_fix{position: absolute; bottom: 0; width: 100%; height: 100px;}
+.keyboard-open.platform-ios .bot_fix{position: absolute; bottom: 256px;}
+.bot_fix .top_bottom{padding: 5px;background-color: #333333;}
+.bot_fix .top_bottom input[type="number"]{background-color: #fff !important; border-radius: 5px !important; margin-bottom: 0; width: 100%; color: #000 !important; padding:0 5px;}
+.bot_fix .top_bottom p{padding-bottom: 0;}
+.bot_fix .left_sec{float:  left; width: 70%;}
+.bot_fix .right_sec{float:  right; width: 30%;}
+.bot_fix .btn{position: relative; display: block;}
+
+.dt.dt-modal + .dt.dt-modal + .dt.dt-modal{display: none !important;}
+
+/* Login */
+.home.login .bottom_sec .col_1 { background: #fff !important;padding: 20px 10px;height: auto; color: #0e0e0e}
+.home.login .bottom_sec{ width: 95%}
+.home.login .bottom_sec .list{margin-bottom: 10px;}
+
+/* Welcome */
+.pane, .view{ background: #262626}
+.home.welocme .banner{height: auto}
+.home.welocme .banner .bg_banner{height: 200px; background: url(../img/wide_banner.jpg) no-repeat center center; background-size: cover;}
+.home.welocme .bottom_sec{ width: 98%; padding-top: 40px;}
+.home.welocme .bottom_sec.bot{ padding-top: 71px;}
+.home.welocme .bottom_sec .col_1 { background: #fff !important;padding: 20px 10px;height: auto; color: #0e0e0e}
+.home.welocme .bottom_sec .col_1:focus {box-shadow: 0 0 15px #ad01a6}
+.home.welocme .bottom_sec .list{margin-bottom: 14px;}
+.home.welocme .list .btn{position: relative; max-width: 100%; font-size: 32px; border-radius: 3px; height: 70px}
+.home.welocme .list p{ color: #fff; text-align: center; font-weight: 300; font-size: 16px; margin-top: 15px;}
+.home.welocme .list a{ color: #ad01a6; font-weight: 500; text-decoration: underline}
+.user_dashboard .dummy_bar{ height: 100px; background: transparent; border: none}
+.title_custom{ background: #ff00f5; color: #fff; text-align: center; position: fixed; width: 100%; z-index: 99999; top: 45px; border: none; box-shadow: 0 0 10px #222}
+.title_custom h1{font-weight: 300; font-size: 26px; padding-top: 10px; margin-bottom: 0;}
+.title_custom p{font-weight: 300; font-size: 16px; padding-top: 0px; color: #fff; padding-bottom: 10px;}
+.user_dashboard .left_side{ width: 65%; display: inline-block; vertical-align: top; text-align: left;}
+.user_dashboard .left_side p{ font-size: 12px;color: #333333;display: block;text-overflow: clip;word-wrap: break-word;white-space: normal; line-height: normal}
+.user_dashboard .left_side a{ font-size: 12px; color: #ff00f5; text-decoration: underline; display: block;}
+.user_dashboard .right_side{ width: 33%; display: inline-block; vertical-align: top; text-align: right}
+.user_dashboard .right_side h2{ font-weight: bold; font-size: 16px; color: #333}
+.user_dashboard .accepted .right_side h2{color: #35e856;}
+.user_dashboard .right_side p{color: #000;}
+.user_dashboard .right_side h3{color: #000; font-weight: bold; font-size: 20px;}
+.user_dashboard .bar_bottom{display: block; width: 100%; padding-top: 8px; padding-bottom: 0px;}
+.user_dashboard .bar_bottom a{ font-size: 13px; color: #fb5c32; text-decoration: underline}
+.user_dashboard .bar_bottom p{display: inline-block; vertical-align: top; text-align: right; float: right; font-weight: bold; color: #222}
+.user_dashboard .offer{width: 95%; margin: 0 auto; overflow: visible; margin-top: 12px; padding: 10px}
+
+.title_custom .bottom_bar{ width: 100%; padding: 5px 0}
+.title_custom .bottom_bar{ width: 100%; padding: 5px 0}
+.title_custom .bottom_bar .left_txt{width: 40%; font-size: 14px; display: inline-block; vertical-align: top; text-align: left; color: #000; font-weight: bold; line-height: 35px; float: left}
+.title_custom .bottom_bar .right_txt{width: 40%; font-size: 14px; color: #000; font-weight: bold; float: right;  text-align: right; color: #000; font-weight: bold; line-height: 35px}
+.title_custom .bottom_bar .right_txt input{background: #fff; border-radius: 3px; line-height: 20px; padding: 3px; border: none; display: inline-block; vertical-align: top; margin: 0 10px; width: 60px; color: #000; font-weight: bold; text-align: center;}
+
+.admin_dashboard.user_dashboard .dummy_bar{ height: 150px}
+.admin_dashboard.user_dashboard .offer{padding: 0; width: 100%; background: transparent; border: none;}
+.admin_dashboard.user_dashboard .offer .list_offer{border: none;}
+.admin_dashboard.user_dashboard .offer .list_offer .list{width: 95%; margin: 0 auto; overflow: visible; margin-top: 12px; padding: 10px; background: #fff; margin-bottom: 58px;}
+.admin_dashboard.user_dashboard .bar_bottom {display: block;width: 100%;padding-top: 8px;padding-bottom: 0px;position: absolute;bottom: -50px;left: 0;}
+.user_dashboard .bar_bottom button{display: inline-block; vertical-align: top; width: 49.4%; background: #d03106; border: 0; outline: none; color: #fff; position: absolute; bottom: 0; left: 0; line-height: 45px; font-size: 20px; font-weight: 300;}
+.user_dashboard .bar_bottom button.acc{background: #09bc2a; right: 0; left: auto}
+.admin_dashboard.user_dashboard .offer .list_offer.action .bar_bottom {display: none;}
+.admin_dashboard.user_dashboard .offer .list_offer.action .list{margin-bottom: 4px;}
+.admin_dashboard.user_dashboard .offer .list_offer .accept{ color: #09bc2a}
+.admin_dashboard.user_dashboard .offer .list_offer .reject{ color: #ca2b01}
+.admin_dashboard.user_dashboard .left_side p{padding-bottom: 8px;}
+.admin_dashboard.user_dashboard .left_side p b{font-size: 14px;}
+
+.offer_popup{ position: fixed;top: 0;bottom: 0;background: rgba(0, 0, 0, 0.77);width: 100%;border: none;text-align: center;}
+.offer_popup .popup{width: 90%; margin: 0 auto; margin-top: 100px;  height: 500px; position: relative}
+.offer_popup .close{ position: absolute; left: 12px; top: 20px; width: 15px}
+.offer_popup .close img{width: 100%;}
+.offer_popup .popup .top_part{ background: url(../img/top_part.png) no-repeat top center; background-size: 100% 100%; padding-top: 30px;height: 140px; font-size: 12px}
+.offer_popup .popup .top_part p{font-size: 12px; color: #000; font-weight: 300}
+.offer_popup .popup .top_part h3{ font-weight: bold; font-size: 26px; padding-bottom: 0; line-height: 25px; margin-bottom: 0; color: #333}
+.offer_popup .popup .top_part h3 b{font-weight: 800; font-size: 32px;}
+.offer_popup .popup .top_part h4{ font-weight: bold; font-size: 20px; color: #333; line-height: 20px}
+.offer_popup .popup .mid_part{ color: #fff; padding: 30px; background: rgba(38, 38, 38, 0.86); overflow: hidden; padding: 12px 30px;}
+.offer_popup .popup .mid_part .left_txt{text-align: left; font-weight: 800; float: left; font-size: 15px; padding-top: 10px;}
+.offer_popup .popup .mid_part .right_txt{text-align: right; font-weight: 800; float: right; color: #fff;}
+.offer_popup .popup .mid_part .right_txt p{font-size: 9px; font-weight: 300; color: #fff; letter-spacing: 0px; opacity: 0.6}
+.offer_popup .popup .mid_part .right_txt h3{font-size: 21px; font-weight: 600; color: #fff; line-height: 50px}
+.offer_popup .popup .mid_part .right_txt h3 b{font-size: 58px; font-weight: 800; color: #fff; position: relative; display: inline-block; vertical-align: bottom; top: 1px}
+.offer_popup .popup .bottom_part{background: url(../img/bottom_part.png) no-repeat center bottom; height: 121px; background-size: 100% 100%; width: 100%; padding-top: 20px; box-sizing: border-box}
+.offer_popup .popup .bottom_part p{ font-weight: bold; color: #333; letter-spacing: 0px; font-size: 16px;}
+.offer_popup .popup .bottom_part h3{ font-weight: bold;color: #fff; font-size: 40px; opacity: 0.5}
+
+
+.success_popup{ position: fixed;top: 0;bottom: 0;background: rgba(0, 0, 0, 0.77);width: 100%;border: none;text-align: center;}
+.success_popup .popup{width: 90%; margin: 0 auto; margin-top: 100px;  height: 500px; position: relative}
+.success_popup .close{ position: absolute; left: 12px; top: 20px; width: 15px}
+.success_popup .close img{width: 100%;}
+.success_popup .popup .top_part{ background: url(../img/top_part.png) no-repeat top center; background-size: 100% 100%; padding-top: 30px;height: 90px; font-size: 12px}
+.success_popup .popup .top_part p{font-weight: bold; font-size: 20px; padding-bottom: 0; line-height: 25px; margin-bottom: 0; color: #333; text-overflow: clip; max-width: 230px;     white-space: normal; margin: 0 auto;}
+.success_popup .popup .top_part h3{font-size: 20px; color: #333; font-weight: 900; padding-top: 20px;}
+.success_popup .popup .mid_part{ color: #fff; padding: 30px; background: rgba(38, 38, 38, 0.86); overflow: hidden; padding: 12px 30px; position: relative; height: 135px; background-size: 100%; width: 98%; margin: 0 auto}
+.success_popup .popup .mid_part:after{content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: #580054; opacity: 0.5; z-index: 0}
+.success_popup .popup .mid_part *{z-index: 1; position: relative}
+.success_popup .popup .mid_part img{max-width: 80px}
+.success_popup .popup .mid_part h3{ font-size: 12px; color: #fff; font-weight: 300;text-overflow: clip; max-width: 140px;     white-space: normal; margin: 0 auto;}
+.success_popup .popup .bottom_part{background: url(../img/bottom_part.png) no-repeat center bottom; height: 121px; background-size: 100% 100%; width: 100%; padding-top: 20px; box-sizing: border-box}
+.success_popup .popup .bottom_part p{ font-weight: 400; color: #000; letter-spacing: 0px; font-size: 12px; text-overflow: clip; max-width: 280px; white-space: normal; margin: 0 auto; line-height: 18px}
+.success_popup .popup .bottom_part .go_to{ max-width: 98%; display: block; margin: 0 auto; margin-top: 10px;}
+.success_popup .popup .bottom_part .go_to img{ max-width: 100%}
+.success_popup .popup .bottom_part p b{ font-weight:900; color: #000; letter-spacing: 0px; font-size: 12px;}
+.success_popup .popup .bottom_part h3{ font-weight: bold;color: #fff; font-size: 40px; opacity: 0.5}
+
+.fail_popup{ position: fixed;top: 0;bottom: 0;background: rgba(0, 0, 0, 0.77);width: 100%;border: none;text-align: center;}
+.fail_popup .popup{width: 90%; margin: 0 auto; margin-top: 100px;  height: 323px; position: relative; background: url(../img/fail_bg.png) center center; background-size: 100% 100%;}
+.fail_popup .close{ position: absolute; left: 12px; top: 20px; width: 15px}
+.fail_popup .close img{width: 100%;}
+.fail_popup .popup .top_part{ padding-top: 30px;height: 90px; font-size: 12px}
+.fail_popup .popup .top_part p{font-weight: bold; font-size: 20px; padding-bottom: 0; line-height: 25px; margin-bottom: 0; color: #333; text-overflow: clip; max-width: 230px;     white-space: normal; margin: 0 auto;}
+.fail_popup .popup .top_part h3{font-size: 20px; color: #333; font-weight: 900; padding-top: 20px;}
+.fail_popup .popup .mid_part_fail{ padding: 30px 0; padding-bottom: 10px;}
+.fail_popup .popup .mid_part_fail p{ color: #333; text-overflow: clip; max-width: 200px; white-space: normal; margin: 0 auto; font-size: 16px; }
+.fail_popup .popup .mid_part_fail a{ color: #333; text-overflow: clip; max-width: 200px; white-space: normal; margin: 0 auto; font-size: 14px; margin-top: 50px; display: block; text-decoration: underline;}
+.fail_popup .popup .bottom_part{ height: 121px; background-size: 100% 100%; width: 100%; padding-top: 0px; box-sizing: border-box}
+.fail_popup .popup .bottom_part .go_to{ max-width: 97%; display: block; margin: 0 auto; margin-top: 10px;}
+.fail_popup .popup .bottom_part .go_to img{ max-width: 100%}
+
+
+
+.loading_pop{position: fixed; z-index: 999999; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background: #ad01a6;}
+.loading_pop .bottom_img{position: absolute; bottom: 20%; width: 100%; text-align: center; left: 0; right: 0}
+.loading_pop .move{max-width: 60%; text-align: center; margin: 0 auto; margin-top: 40%; -webkit-animation-duration: 3s; animation-duration: 3s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-timing-function: linear; animation-timing-function: linear; animation-iteration-count:infinite; -webkit-animation-iteration-count:infinite;-webkit-animation-name: shake; animation-name: shake;  }
+.loading_pop .move img{ max-width: 100%; }
+.loading_pop .bottom_img img{max-width: 70%; display: block; margin: 0 auto}
+.loading_pop .move .load{width: 50px; height: 50px; background-size: 100%; position: absolute; top: 55px; left: 80px;
+-webkit-animation-duration: 5s; 
+    animation-duration: 5s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-timing-function: linear; 
+    animation-timing-function: linear; 
+    animation-iteration-count:infinite; 
+    -webkit-animation-iteration-count:infinite; 
+-webkit-animation-name: change_img; animation-name: change_img;
+}
+
+
+.animated { 
+    -webkit-animation-duration: 5s; 
+    animation-duration: 5s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-timing-function: linear; 
+    animation-timing-function: linear; 
+    animation-iteration-count:infinite; 
+    -webkit-animation-iteration-count:infinite; 
+} 
+
+@-webkit-keyframes shake { 
+    0% {-webkit-transform: rotate(-40deg);} 
+    50%{-webkit-transform: rotate(40deg);} 
+    100%{-webkit-transform: rotate(-40deg);} 
+} 
+@keyframes shake { 
+    0% {-webkit-transform: rotate(-40deg);} 
+    50%{-webkit-transform: rotate(40deg);} 
+    100%{-webkit-transform: rotate(-40deg);} 
+} 
+
+@-webkit-keyframes change_img { 
+    0% {background-image: url(../img/load1.png);} 
+    25%{background-image: url(../img/load2.png);} 
+    50%{background-image: url(../img/load3.png);} 
+    75%{background-image: url(../img/load4.png);} 
+    100%{background-image: url(../img/load1.png);} 
+} 
+@keyframes change_img { 
+    0% {background-image: url(../img/load1.png);} 
+    25%{background-image: url(../img/load2.png);} 
+    50%{background-image: url(../img/load3.png);} 
+    75%{background-image: url(../img/load4.png);} 
+    100%{background-image: url(../img/load1.png);} 
+} 

@@ -1,0 +1,28 @@
+<ion-view view-title="User Dashboard" ng-controller="dashbord">
+    <form name="myForm">
+        <ion-item class="title_custom">
+            <h2>treverse</h2>
+            <h1>Offer History</h1>
+            <p>Hi, {{dash_name}}</p>
+        </ion-item>
+        <ion-content class="dark_bg user_dashboard">
+            <ion-item class="dummy_bar"></ion-item>
+            <ion-list class="offer">
+                <div ng-repeat="hotel in user_ls | filter:{ user_id : user_log, archive:true} | orderBy:'-$id':True" ng-if="hotel.reject == true">
+                    <ion-item class="accepted reject bdr_list">
+                        <div>
+                            <div class="top_sec">
+                                <h2>BOOKING STATUS:<span ng-if="hotel.stts == 'rej'"> DECLINED</span><span ng-if="hotel.stts != 'rej'"> Cancelled</span></h2>
+                                <h3>Location: {{hotel.city}},{{hotel.State}}</h3>
+                                <h2 class="mt5" ng-if="hotel.stts != 'rej'">REASON:<span class="reasion">Timed Out</span></h2>
+                            </div>
+                            <div class="reject_cont">
+                            </div>
+                            <ion-option-button class="button-positive icon ion-android-archive" ng-click="archive(hotel.$id)" data-id="{{hotel.$id}}"></ion-option-button> 
+                        </div>
+                    </ion-item>
+                </div>
+            </ion-list>
+        </ion-content>
+    </form>
+</ion-view>

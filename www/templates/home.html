@@ -1,0 +1,62 @@
+<ion-view view-title="{{user_name || 'My Account'}}" ng-controller="ExampleController" hide-back-button="false">
+    <form name="myForm" class="form">
+        <ion-content class="home dark_bg" on-scroll="scrolling()">
+            <div class="overlay"></div>
+            <ion-item class="count_pop">
+                <h3>Hotel Accommodations</h3>
+                <div class="counter room">
+                    <a href="javascript:void(0)" class="left_btn"></a><p><span>1</span>&nbsp;&nbsp;<em>Room</em></p><a href="javascript:void(0)" class="right_btn"></a>
+                </div>
+                <div class="counter guest">
+                    <a href="javascript:void(0)" class="left_btn"></a><p><span>1</span>&nbsp;&nbsp;<em>Guest</em></p><a href="javascript:void(0)" class="right_btn"></a>
+                </div>
+                <div class="counter beds">
+                    <a href="javascript:void(0)" class="left_btn"></a><p><span>1</span>&nbsp;&nbsp;<em>Bed</em></p><a href="javascript:void(0)" class="right_btn"></a>
+                </div>
+                <a href="javascript:void(0)" class="set_btn">Set Details</a>
+            </ion-item>
+            <ion-item class="banner anim">
+                <div class="bg_banner max_height home_place">
+                    <img src="img/Couple-travelling-flipped.jpg" alt="" class="img_1">
+                    <img src="img/header_logo.png" alt="" class="img_2">
+                </div>
+                <div class="icon">
+                    <img src="img/view_icon.png" alt="">
+                </div>
+            </ion-item>
+            <ion-item class="bottom_sec pb60 anim pt60">
+                <ion-list class="top_input">
+                    <img src="img/location.png" alt="">
+                    <input type="text" name="auto" id="auto" placeholder="Enter Address or City" ng-autocomplete class="col_1" value="" name="username" required ng-model="test" options="options" details="details"  data-tap-disabled="true" ng-change='disableTap()' />
+                </ion-list>
+                <ion-list class="middle_sec">
+                    <img src="img/date.png" class="fleft" alt="">
+                    <div class="col_3">
+                        <label>
+                            <input type="text" class="start-date form-control" value="From" id="modalmode" ng-readonly="true" ng-model="formData.date_1">
+                        </label>
+                    </div>
+                    <div class="col_3">
+                        <label >
+                            <input type="text" class="end-date form-control" value="To" id="modalmode_1" ng-readonly="true" ng-model="formData.date_2">
+                        </label>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="accom">
+                        <img src="img/accommodations-icon.png" alt="">
+                        <label class="count_list">1 Room, 1 Guest, 1 Bed</label>
+                    </div>
+
+                </ion-list>
+                <ion-list class="vet_top">
+                    <img src="img/start.png" class="last_img" alt="">
+                    <div class="star_list" ng-controller="yourCtrl">
+                        <rating ng-model="rating.rate" max="rating.max"></rating>
+                        <p>3 stars & up</p>
+                    </div>
+                </ion-list>
+            </ion-item>
+        </ion-content>
+        <button type="submit" class="btn"  ng-click="submit(formData.date_1,formData.date_2)">Search</button>
+    </form>
+</ion-view>

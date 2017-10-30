@@ -1,0 +1,68 @@
+<ion-view view-title="Create Account" ng-controller="loginController">
+    <ion-item class="fail_popup hide get_start" id="demo">
+        <div class="popup">
+            <div class="top_part">
+                <h3>Thank you!</h3>
+                <p>1. Enter Search Criteria</p>
+                <p>2. Select 1 or All</p>
+                <p>3. Make a reasonable offer</p>
+                <br>
+                <p>It's that easy!</p>
+                <a menu-close class="ref_pag" href="#/app/home">Get Started!</a>
+            </div>
+        </div>
+    </ion-item>
+    <div class="term_over overlay hide"></div>
+    <ion-item class="terms hide">
+        <div class="term_box">
+            <p>Terms & Conditions</p>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ducimus reiciendis reprehenderit earum praesentium quas, odit perspiciatis. Eveniet pariatur maxime libero in, id incidunt magnam labore. Expedita et quae tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ducimus reiciendis reprehenderit earum praesentium quas, odit perspiciatis. Eveniet pariatur maxime libero in, id incidunt magnam labore. Expedita et quae tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ducimus reiciendis reprehenderit earum praesentium quas, odit perspiciatis. Eveniet pariatur maxime libero in, id incidunt magnam labore. Expedita et quae tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ducimus reiciendis reprehenderit earum praesentium quas, odit perspiciatis. Eveniet pariatur maxime libero in, id incidunt magnam labore. Expedita et quae tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ducimus reiciendis reprehenderit earum praesentium quas, odit perspiciatis. Eveniet pariatur maxime libero in, id incidunt magnam labore. Expedita et quae tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ducimus reiciendis reprehenderit earum praesentium quas, odit perspiciatis. Eveniet pariatur maxime libero in, id incidunt magnam labore. Expedita et quae tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ducimus reiciendis reprehenderit earum praesentium quas, odit perspiciatis. Eveniet pariatur maxime libero in, id incidunt magnam labore. Expedita et quae tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ducimus reiciendis reprehenderit earum praesentium quas, odit perspiciatis. Eveniet pariatur maxime libero in, id incidunt magnam labore. Expedita et quae tempore.
+            </h5>
+        </div>
+    </ion-item>
+    <form name="myForm" id="sent">
+        <ion-content class="home welocme dark_bg">
+            <ion-item class="banner anim">
+                <div class="bg_banner">
+                    <img src="img/account_info.png" alt="" class="banner_logo top_sec">
+                </div>
+            </ion-item>
+            <a href="javascript:void(0)" class="add_btn"><img src="img/abb_btn.png" id="test" alt=""> <input type="file" name="profile" id="profile" class="hide"></a>
+            <br>
+            <br>
+            <ion-item class="bottom_sec pb60 anim pt0">
+                <ion-list>
+                    <input type="text" placeholder="First Name" class="col_1 req_admin" value="" name="name" id="name" required ng-model="user.name" >
+                </ion-list>
+                <ion-list>
+                    <input type="text" placeholder="Last Name" class="col_1 req_admin" value="" name="l_name" id="l_name" required ng-model="user.l_name" >
+                </ion-list>
+                <ion-list>
+                    <input type="tel" placeholder="Mobile Phone" class="col_1 req_admin" value="" name="mobile" id="mobile" required ng-model="user.mobile">
+                </ion-list>
+                <ion-list>
+                    <button type="submit" class="btn submit_icon"  ng-click="adminuser(user.name , user.l_name, user.mobile)">Create Account</button>
+                </ion-list>
+                <ion-list>
+                    <p>Already have an Account? <a href="#/app/signin">Sign In</a></p>
+                </ion-list>
+            </ion-item>
+        </ion-content>
+    </form>
+    <ion-item class="fail_popup hide reg">
+        <div class="popup">
+            <div class="top_part">
+                <h3 class="logo_txt">treverse</h3>
+                <div class="title_sec">
+                    <h5>VERIFICATION</h5>
+                </div>
+                <p>An email has been sent with your verification code has been sent to email {{email}}</p>
+            </div>
+            <div class="mid_part_fail">
+                <input type="number" name="number" id="number" ng-model="number" placeholder="Enter Verification Code"/>
+                <a href="javascript:void(0)" ng-click="varify_click(number)" class="conf_btn">CONFIRM</a>
+                <a href="javascript:void(0)" class="conf_btn rest_btn" ng-click="resend(number)">Resend </a>
+            </div>
+        </div>
+    </ion-item>
+</ion-view>

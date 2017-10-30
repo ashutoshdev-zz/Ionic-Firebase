@@ -1,0 +1,86 @@
+<ion-view view-title="Sign in" ng-controller="loginController">
+    <ion-item class="step_pop hide">
+        <div class="popup">
+            <div class="close"><a href="#/app/home"><img src="img/close.png" alt=""></a></div>
+            <h3>Treverse Makes it Simple!
+                <br>Easy as 1 - 2 - 3! Travel in Reverse!
+            </h3>
+            <div class="inner_detail">
+                <h4>1. MAKE AN OFFER</h4>
+                <p>It’s your budget! You decide what you are willing to
+                    pay. There is no obligation until you offer is accepted.</p>
+                <h4>2. OFFER IS SENT TO SELECTED HOTELS</h4>
+                <p>As soon as you click the “Make an Offer” button
+                    your offer goes out to as many hotels that you have
+                    selected. This increases your chance for success!
+                </p>
+                <h4>3. OFFER IS ACCEPTED</h4>
+                <p>Once the offer is accepted you will be on your way. 
+                    It’s that simple!</p>
+                <label for="dont_show"><input type="checkbox" name="dont_show" id="dont_show"><em></em> Don't Show Again</label>
+            </div>
+        </div>
+    </ion-item>
+    <ion-item class="fail_popup hide get_start" id="demo">
+        <div class="popup">
+            <div class="top_part">
+                <h3>Thank you!</h3>
+                <p>1. Enter Search Criteria</p>
+                <p>2. Select 1 or All</p>
+                <p>3. Make a reasonable offer</p>
+                <br>
+                <p>It's that easy!</p>
+                <a menu-close href="#/app/home">Get Started!</a>
+            </div>
+        </div>
+    </ion-item>
+    <ion-item class="fail_popup reg hide get_start" id="con_number">
+        <div class="popup">
+            <div class="top_part">
+                <h3 class="logo_txt">treverse</h3>
+                <div class="title_sec">
+                    <h5>VERIFICATION</h5>
+                </div>
+                <p>An email has been sent with your verification code has been sent to email {{email}}</p>
+            </div>
+            <div class="mid_part_fail">
+                <input type="number" name="number" id="number" ng-model="number" placeholder="Enter Verification Code"/>
+                <a href="javascript:void(0)" ng-click="varify_click(number)" class="conf_btn">CONFIRM</a>
+                <a href="javascript:void(0)" class="conf_btn rest_btn" ng-click="resend(number)">Resend </a>
+            </div>
+        </div>
+    </ion-item>
+    <ion-content class="home login dark_bg">
+        <ion-item class="banner anim half_height">
+            <div class="bg_banner">
+                <img src="img/login_banner.jpg" alt="">
+                <div class="leader_logg">
+                    <img src="img/header_logo.png" alt="">
+                </div>
+            </div>
+            <div class="icon">
+                <img src="img/view_icon.png" alt="">
+            </div>
+        </ion-item>
+        <ion-item class="bottom_sec pb90 anim">
+            <div class="">
+                <ion-list>
+                    <input type="email" placeholder="E-mail" class="col_1" value="" id="email" name="email" ng-model="login.username" required >
+                </ion-list>
+                <ion-list>
+                    <input type="password" placeholder="Password" class="col_1" value="" ng-model="login.password" name="password" required >
+                </ion-list>
+                <span class="or_esc">
+                    <p>OR</p>
+                </span>
+                <!--<a href="javascript:void(0)" class="google_auth btn-instagram" ng-click="google_auth()"><b>Sign in</b> with Instagram</a>-->
+                <a href="#/app/home" class="new_small_btn" ng-click= clear()>Process as Guest user</a>
+                <a href="javascript:void(0)" class="fb_auth" ng-click="fb_auth()">Sign in with Facebook</a>
+                <a href="#/app/recover" class="fog_pass">Forgot Password ?</a>
+            </div>
+        </ion-item>
+    </ion-content>
+    <ion-footer-bar>
+        <button type="submit" class="btn"  ng-click="login(login.username , login.password)">Sign In</button>
+    </ion-footer-bar>
+</ion-view>

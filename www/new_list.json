@@ -1,0 +1,353 @@
+{
+  "admin" : {
+    "admin" : {
+      "hotel_id" : 1,
+      "password" : "this.admin",
+      "threshold" : 350
+    },
+    "sacramento_ca" : {
+      "hotel_id" : 2,
+      "password" : "admin",
+      "threshold" : 100
+    },
+    "sacramento_ky" : {
+      "hotel_id" : 8,
+      "password" : "hotel3",
+      "threshold" : 100
+    },
+    "sacramento_tx" : {
+      "hotel_id" : 13,
+      "password" : "this.admin",
+      "threshold" : 100
+    }
+  },
+  "hotel" : {
+    "1" : {
+      "Address1" : "10593 Fairway Dr",
+      "Address2" : "",
+      "City" : "Roseville",
+      "DisplayImage" : "img/h_1.jpg",
+      "Latitude" : 38.7952177,
+      "Longitude" : -121.3632966,
+      "Name" : "Hotel1",
+      "Phone" : "(916) 782-2989",
+      "Rating" : 3,
+      "State" : "CA",
+      "Zip" : 95765,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "2" : {
+      "Address1" : "8058 Orchard Loop Ln",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_2.jpg",
+      "Latitude" : 38.4549012,
+      "Longitude" : -121.477788,
+      "Name" : "Hotel2",
+      "Phone" : 0,
+      "Rating" : 1,
+      "State" : "CA",
+      "Zip" : 95624,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_2.png",
+      "todate" : "1480464000"
+    },
+    "3" : {
+      "Address1" : "4422 Y St",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_3.jpg",
+      "Latitude" : 38.5520671,
+      "Longitude" : -121.524234,
+      "Name" : "Hotel3",
+      "Phone" : 0,
+      "Rating" : 2,
+      "State" : "CA",
+      "Zip" : 95817,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_3.png",
+      "todate" : "1480464000"
+    },
+    "4" : {
+      "Address1" : "2101 River Plaza Dr",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_1.jpg",
+      "Latitude" : 38.6052531,
+      "Longitude" : -121.581428,
+      "Name" : "Courtyard Sacramento Airport Natomas",
+      "Phone" : "(916) 922-1120",
+      "Rating" : 3,
+      "State" : "CA",
+      "Zip" : 95833,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "5" : {
+      "Address1" : "1780 Tribute Rd",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_2.jpg",
+      "Latitude" : 38.5967961,
+      "Longitude" : -121.516802,
+      "Name" : "Fairfield Inn Sacramento Cal Expo",
+      "Phone" : "(916) 920-5300",
+      "Rating" : 4,
+      "State" : "CA",
+      "Zip" : 95815,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_2.png",
+      "todate" : "1480464000"
+    },
+    "7" : {
+      "Address1" : "10593 Fairway Dr",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_1.jpg",
+      "Latitude" : 38.7952177,
+      "Longitude" : -121.3632966,
+      "Name" : "SpringHill Suites Sacramento Roseville",
+      "Phone" : "(916) 782-2989",
+      "Rating" : 5,
+      "State" : "CA",
+      "Zip" : 95765,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "threshold" : 700,
+      "todate" : "1480464000"
+    },
+    "8" : {
+      "Address1" : "8058 Orchard Loop Ln",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_2.jpg",
+      "Latitude" : 38.4549012,
+      "Longitude" : -121.477788,
+      "Name" : "Fairfield Inn & Suites Sacramento Elk Grove",
+      "Phone" : 0,
+      "Rating" : 1,
+      "State" : "KY",
+      "Zip" : 95624,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_2.png",
+      "todate" : "1480464000"
+    },
+    "9" : {
+      "Address1" : "4422 Y St",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_3.jpg",
+      "Latitude" : 38.5520671,
+      "Longitude" : -121.524234,
+      "Name" : "Courtyard Sacramento Midtown",
+      "Phone" : 0,
+      "Rating" : 2,
+      "State" : "KY",
+      "Zip" : 95817,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "10" : {
+      "Address1" : "2101 River Plaza Dr",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_1.jpg",
+      "Latitude" : 38.6052531,
+      "Longitude" : -121.581428,
+      "Name" : "Courtyard Sacramento Airport Natomas",
+      "Phone" : "(916) 922-1120",
+      "Rating" : 3,
+      "State" : "KY",
+      "Zip" : 95833,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "11" : {
+      "Address1" : "1780 Tribute Rd",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_2.jpg",
+      "Latitude" : 38.5967961,
+      "Longitude" : -121.516802,
+      "Name" : "Fairfield Inn Sacramento Cal Expo",
+      "Phone" : "(916) 920-5300",
+      "Rating" : 4,
+      "State" : "KY",
+      "Zip" : 95815,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "12" : {
+      "Address1" : "10683 White Rock Rd",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_1.jpg",
+      "Latitude" : 38.5876275,
+      "Longitude" : -121.3601292,
+      "Name" : "Courtyard Sacramento Rancho Cordova",
+      "Phone" : "(916) 638-3800",
+      "Rating" : 5,
+      "State" : "KY",
+      "Zip" : 95670,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "13" : {
+      "Address1" : "10593 Fairway Dr",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_1.jpg",
+      "Latitude" : 38.7952177,
+      "Longitude" : -121.3632966,
+      "Name" : "SpringHill Suites Sacramento Roseville",
+      "Phone" : "(916) 782-2989",
+      "Rating" : 1,
+      "State" : "TX",
+      "Zip" : 95765,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "14" : {
+      "Address1" : "8058 Orchard Loop Ln",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_2.jpg",
+      "Latitude" : 38.4549012,
+      "Longitude" : -121.477788,
+      "Name" : "Fairfield Inn & Suites Sacramento Elk Grove",
+      "Phone" : 0,
+      "Rating" : 2,
+      "State" : "TX",
+      "Zip" : 95624,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "15" : {
+      "Address1" : "4422 Y St",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_3.jpg",
+      "Latitude" : 38.5520671,
+      "Longitude" : -121.524234,
+      "Name" : "Courtyard Sacramento Midtown",
+      "Phone" : 0,
+      "Rating" : 3,
+      "State" : "TX",
+      "Zip" : 95817,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "16" : {
+      "Address1" : "2101 River Plaza Dr",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_1.jpg",
+      "Latitude" : 38.6052531,
+      "Longitude" : -121.581428,
+      "Name" : "Courtyard Sacramento Airport Natomas",
+      "Phone" : "(916) 922-1120",
+      "Rating" : 4,
+      "State" : "TX",
+      "Zip" : 95833,
+      "fromdate" : "1477765800",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    },
+    "17" : {
+      "Address1" : "1780 Tribute Rd",
+      "Address2" : "",
+      "City" : "Sacramento",
+      "DisplayImage" : "img/h_2.jpg",
+      "Latitude" : 38.5967961,
+      "Longitude" : -121.516802,
+      "Name" : "Fairfield Inn Sacramento Cal Expo",
+      "Phone" : "(916) 920-5300",
+      "Rating" : 5,
+      "State" : "TX",
+      "Zip" : 95815,
+      "fromdate" : "1480464000",
+      "icons" : "img/l_1.png",
+      "todate" : "1480464000"
+    }
+  },
+  "request" : {
+    "1478104628617" : {
+      "-KV_tjT9nLRz_Xt5lq8f" : {
+        "Name" : "Hotel1",
+        "ammount" : 69980,
+        "booking_id" : "1478104628617",
+        "desci" : "true",
+        "hotel_id" : "1",
+        "time" : 1478104643848,
+        "user_id" : "cnc@cnc.com",
+        "user_name" : "cnc"
+      }
+    },
+    "1478104740027" : {
+      "-KV_uNKmwDYiN5qGFL_1" : {
+        "ammount" : 680,
+        "booking_id" : "1478104740027",
+        "desci" : "false",
+        "hotel_id" : "1",
+        "time" : 1478104811136,
+        "user_id" : "cnc@cnc.com",
+        "user_name" : "cnc"
+      }
+    }
+  },
+  "user_hotel_list" : {
+    "-KV_tjXkgPYH721NilbX" : {
+      "Latitude" : 38.7952177,
+      "Longitude" : -121.3632966,
+      "Name" : "Hotel1",
+      "Phone" : "(916) 782-2989",
+      "State" : "CA",
+      "address" : "10593 Fairway Dr",
+      "city" : "Roseville",
+      "conformation" : "1478104628617",
+      "time" : 1478104644143,
+      "user_id" : "cnc@cnc.com",
+      "user_name" : "cnc"
+    },
+    "-KV_uNp8hiBigjw8Fhug" : {
+      "ammount" : "680.00",
+      "city" : "Roseville",
+      "reject" : true,
+      "stars" : "3 stars & up",
+      "total" : 1,
+      "user_id" : "cnc@cnc.com"
+    }
+  },
+  "users" : {
+    "-KV1YCZiUaDljlY87kuD" : {
+      "email" : "aaisham69@yahoo.com",
+      "password" : "testapp2016",
+      "username" : "Armando Isham"
+    },
+    "-KV44bNgIacU-PMPIOlv" : {
+      "email" : "Erick@silasryanmedia.com",
+      "password" : "nicolette7",
+      "username" : "Erick Iwaishi"
+    },
+    "-KV7RhfgPgi6i0zzESYo" : {
+      "email" : "keith.rull@gmail.com",
+      "password" : "12345678",
+      "username" : "Keith Rull"
+    },
+    "-KV_tWIhgrnkt0j2nc3V" : {
+      "email" : "cnc@cnc.com",
+      "password" : "this.admin",
+      "username" : "cnc"
+    }
+  }
+}

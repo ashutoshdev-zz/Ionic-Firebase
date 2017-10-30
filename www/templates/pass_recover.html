@@ -1,0 +1,35 @@
+<ion-view view-title="Password Recover" ng-controller="loginController">
+    <!--<ion-item class="fail_popup hide get_start">
+        <div class="popup">
+            <div class="top_part">
+                <h3>Thank you!</h3>
+                <p>1. Enter Search Criteria</p>
+                <p>2. Select 1 or All</p>
+                <p>3. Make a reasonable offer</p>
+                <br>
+                <p>It's that easy!</p>
+                <a menu-close href="#/app/home">Get Started!</a>
+            </div>
+        </div>
+    </ion-item>-->
+    <form name="myForm">
+        <ion-content class="home login dark_bg">
+            <ion-item class="banner anim half_height">
+                <div class="bg_banner">
+                    <img src="img/login_banner.jpg" alt="">
+                </div>
+                <div class="icon">
+                    <img src="img/view_icon.png" alt="">
+                </div>
+            </ion-item>
+            <ion-item class="bottom_sec pb60 anim">
+                <div class="">
+                    <ion-list class="">
+                        <input type="text" placeholder="E-mail" class="col_1" value="" name="email" ng-model="login.username" required >
+                    </ion-list>
+                </div>
+            </ion-item>
+        </ion-content>
+        <button type="submit" class="btn"  ng-click="reset(login.username)">SUBMIT</button>
+    </form>
+</ion-view>

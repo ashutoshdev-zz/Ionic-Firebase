@@ -1,0 +1,105 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-dark">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-dark">
+
+        </ion-header-bar>
+        <ion-content ng-controller="states">
+            <ion-list>
+                <div ng-if="status == true">
+                    <ion-item menu-close href="#/app/home">
+                        Home
+                    </ion-item>
+                    <ion-item menu-close href="#/app/profile">
+                        My Bookings
+                    </ion-item>
+                    <ion-item class="open_pop">
+                        How It Works
+                    </ion-item>
+                    <ion-item menu-close href="#/app/list">
+                        Information
+                    </ion-item>
+                    <ion-item menu-close ng-click="logout()">
+                        Logout
+                    </ion-item>
+                </div>
+                <div ng-if="status != true">
+                    <ion-item menu-close href="#/app/signin">
+                        Login
+                    </ion-item>
+                    <ion-item menu-close href="#/app/registration">
+                        Create Account
+                    </ion-item>
+                    <ion-item class="open_pop">
+                        How It Works
+                    </ion-item>
+                </div>
+
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+    <div class="how_it_work">
+    </div>
+    <div class="slides" ng-controler="how_work">
+        <ion-slide-box on-slide-changed="slideChanged(index)">
+            <ion-slide>
+                <div class="slid_img">
+                    <img src="img/banner.jpg" alt="">
+                </div>
+                <div class="slide_cont">
+                    <h2>Create An Account</h2>
+                    <p>Hotel needs your information, so they can effectively book your stay and contact you for each booking confirmation</p>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="slid_img">
+                    <img src="img/banner.jpg" alt="">
+                </div>
+                <div class="slide_cont">
+                    <h2>Enter Your Search Details</h2>
+                    <p>Last minute has never been quite this easy. Pick a city, duration of stay, accommodations, and star rating... then, tap Search button.</p>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="slid_img">
+                    <img src="img/banner.jpg" alt="">
+                </div>
+                <div class="slide_cont">
+                    <h2>Make an offer to <br>one hotel or all</h2>
+                    <p>Once you have selected your desired hotels make a reasonable offer</p>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="slid_img">
+                    <img src="img/banner.jpg" alt="">
+                </div>
+                <div class="slide_cont">
+                    <h2>Offer Accepted!</h2>
+                    <p>Reasonable Offers increases your odds of getting an Accepted Offer.</p>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="slid_img">
+                    <img src="img/banner.jpg" alt="">
+                </div>
+                <div class="slide_cont">
+                    <h2>Travel In Reverse, Treverse!</h2>
+                    <p>Last minute booking has never been quite this easy.</p>
+                    <a menu-close ng-click="reg()" class="menu_btn">Let's Get Started!</a>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </div>
+</ion-side-menus>

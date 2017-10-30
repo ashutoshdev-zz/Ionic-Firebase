@@ -1,0 +1,12 @@
+<ion-view view-title="Notifications">
+    <ion-content class="dark_bg user_dashboard" ng-controller="push">
+        <ion-item class="about notification">
+            <h1>Notifications</h1>
+            <h3>Options:</h3>
+        </ion-item>
+        <div class="toggle_option">
+            <ion-toggle ng-model="airplaneMode" ng-click="change()" toggle-class="toggle-calm">Push Notifications</ion-toggle>
+            <ion-toggle ng-model="soundmode" ng-click="sound()" toggle-class="toggle-calm">Offer Sound Alert</ion-toggle>
+        </div>
+    </ion-content>
+</ion-view>

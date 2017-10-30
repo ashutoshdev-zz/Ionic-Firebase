@@ -1,0 +1,107 @@
+<ion-view view-title="Hotel Dashboard" ng-controller="ExampleController">
+    <form name="myForm">
+        <ion-item class="title_custom">
+            <h1>Residence Inn Sacramento</h1>
+            <p>Hi, Hotel Front Desk</p>
+            <div class="bottom_bar">
+                <div class="left_txt">Bids Pending: 3</div>
+                <div class="right_txt">
+                    Threshold:
+                    <input type="number" />
+                </div>
+            </div>
+        </ion-item>
+        <ion-content class="dark_bg user_dashboard admin_dashboard">
+
+            <ion-item class="dummy_bar"></ion-item>
+            <ion-item class="offer">
+               
+                <ion-list class="list_offer">
+                    <div class="left_side">
+                        <p>User: Enrique Paul</p>                        
+                    </div>
+                    <div class="right_side">
+                        <p>Timer: <span>1:45</span></p>
+                        <p>Pending - <span>$75</span></p>
+                    </div>
+                    <div class="bar_bottom">
+                        <button class="rej">Reject</button>
+                        <button class="acc" ng-click="accept_offer()">Accept</button>
+                    </div>                    
+                </ion-list>
+                
+                <ion-list class="list_offer">
+                    <div class="left_side">
+                        <p>User: Enrique Paul</p>                        
+                    </div>
+                    <div class="right_side">
+                        <p>Timer: <span>1:45</span></p>
+                        <p>Pending - <span>$75</span></p>
+                    </div>
+                    <div class="bar_bottom">
+                        <button class="rej">Reject</button>
+                        <button class="acc">Accept</button>
+                    </div>                    
+                </ion-list>
+                
+                <ion-list class="list_offer">
+                    <div class="left_side">
+                        <p>User: Enrique Paul</p>                        
+                    </div>
+                    <div class="right_side">
+                        <p>Timer: <span>1:45</span></p>
+                        <p>Pending - <span>$75</span></p>
+                    </div>
+                    <div class="bar_bottom">
+                        <button class="rej">Reject</button>
+                        <button class="acc">Accept</button>
+                    </div>                    
+                </ion-list>
+                
+                <ion-list class="list_offer action"><!--Action class will hide bottom buttons-->
+                    <div class="left_side">
+                        <p>User: Enrique Paul</p>
+                        <p><b>Confirmation #: 1N456HG234</b></p>
+                    </div>
+                    <div class="right_side">
+                        <p>Timer: <span>0:00</span></p>
+                        <p><span class="accept">Accepted</span> - <span>$75</span></p>
+                    </div>
+                    <div class="bar_bottom">
+                        <button class="rej">Reject</button>
+                        <button class="acc">Accept</button>
+                    </div>                    
+                </ion-list>
+                
+                <ion-list class="list_offer action"><!--Action class will hide bottom buttons-->
+                    <div class="left_side">
+                        <p>User: Erick I.</p>                        
+                    </div>
+                    <div class="right_side">
+                        <p>Timer: <span>0:00</span></p>
+                        <p><span class="reject">Rejected</span> - <span>$75</span></p>
+                    </div>
+                    <div class="bar_bottom">
+                        <button class="rej">Reject</button>
+                        <button class="acc">Accept</button>
+                    </div>                    
+                </ion-list>
+                
+                <ion-list class="list_offer action"><!--Action class will hide bottom buttons-->
+                    <div class="left_side">
+                        <p>User: Enrique Paul</p>
+                        <p><b>Confirmation #: 1N456HG234</b></p>
+                    </div>
+                    <div class="right_side">
+                        <p>Timer: <span>0:00</span></p>
+                        <p><span class="accept">Accepted</span> - <span>$75</span></p>
+                    </div>
+                    <div class="bar_bottom">
+                        <button class="rej">Reject</button>
+                        <button class="acc">Accept</button>
+                    </div>                    
+                </ion-list>
+            </ion-item>
+        </ion-content>
+    </form>
+</ion-view>

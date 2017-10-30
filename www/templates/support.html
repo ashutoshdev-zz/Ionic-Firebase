@@ -1,0 +1,38 @@
+<ion-view view-title="Support">
+    <ion-content class="dark_bg user_dashboard">
+        <ion-item class="about">
+            <h1>Support</h1>
+            <br>
+            <p>Looking to make an offer and need help? Our support team is here to make sure you have no issues with making an offer and getting an accepted offer. There are three things to keep in mind when making an offer:</p>
+            <div class="support_sec">
+                <h4>Making A Offer They Can’t Refuse!</h4>
+                <h3>1. Put in your desired Search Criteria and Hotel Accommodations</h3>
+                <h3>2. Select all or one of the hotels in the list</h3>
+                <h3>3. Make a reasonable offer and get an accepted offer*</h3>
+            </div>
+            <p class="small_txt">* An accepted offer is not a guarantee, but it is more likely to happen when your offer is more realistic. One thing to keep in mind is that hotels are subject to capacity numbers and may not be able to accept lower offers during peak seasons.</p>
+            <br>
+            <p>Have a question for our support team? <a href="javascript:void(0)">Check out our FAQs</a></p>
+            <br>
+            <div class="support_sec">
+                <h4>Need Immediate Help?</h4>
+                <p>Call 1.800.555.1212 or Email: info@treverseapp.com</p>
+            </div>
+        </ion-item>
+        <ion-item class="about" ng-controller="feedback">
+            <h1>Feedback <a href="javascript:void(0)" class="fed_back" ng-click="feedback(email,option,text)"><img src="img/sent_btn.png" alt=""></a></h1>
+            <form>
+                <input type="email" placeholder="Email Address" ng-model="email">
+                <label>
+                    <select ng-model="option">
+                        <option  value="Feedback" selected>Feedback</option>
+                        <option  value="Enhancement">Enhancement</option>
+                        <option  value="Support Request">Support Request</option>
+                        <option  value="Bug">Bug</option>
+                    </select>
+                </label>
+                <textarea placeholder="Content" ng-model="text"></textarea>
+            </form>
+        </ion-item>
+    </ion-content>
+</ion-view>

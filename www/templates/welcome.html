@@ -1,0 +1,30 @@
+<ion-view view-title="Welcome" ng-controller="push">
+    <form name="myForm">
+        <ion-content class="home welocme dark_bg">
+            <ion-item class="banner anim half_height">
+                <div class="bg_banner half_height">
+                    <img src="img/login_banner.jpg" alt="">
+                    <img src="img/header_logo.png" class="hover_img_1" alt="">
+                </div>
+                <div class="icon">
+                    <img src="img/view_icon.png" alt="">
+                </div>
+            </ion-item>
+            <ion-item class="bottom_sec pb60 anim bot">
+                <!--<ion-list><a class="btn" href="#/app/home" ng-click="go()">Find Your Destination</a></ion-list>-->
+                <ion-list>
+                    <a class="btn" href="#/app/signin">Sign In</a>
+                </ion-list>
+                <ion-list>
+                    <a class="btn" href="#/app/registration">Create Account</a>
+                </ion-list>
+                <ion-list>
+                    <a class="btn s_font" href="#/app/home" ng-click="clear()">Process as Guest user</a>
+                </ion-list>
+                <!--<ion-list><p><a href="javascript:void(0)" ng-click="reset" class="reset">Reset password </a></p></ion-list>-->
+            </ion-item>
+            <div ng-controller="GeoCtrl">
+            </div>
+        </ion-content>
+    </form>
+</ion-view>

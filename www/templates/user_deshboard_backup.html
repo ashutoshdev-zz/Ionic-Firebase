@@ -1,0 +1,72 @@
+<ion-view view-title="User Dashboard" ng-controller="dashbord">
+    <form name="myForm">
+        <ion-item class="title_custom">
+            <h2>treverse</h2>
+            <h1>Offer History</h1>
+            <p>Hi, {{dash_name}}</p>
+        </ion-item>
+        <ion-content class="dark_bg user_dashboard">
+            <ion-item class="dummy_bar"></ion-item>
+            <ion-list class="offer">
+                <div ng-repeat="hotel in user_ls | filter:{ user_id : user_log, archive:true} | orderBy:'-$id':True">
+                    <ion-item class="accepted bdr_list" ng-if="hotel.reject != true"><!--ng-repeat="(key, hotel) in hotel" ng-if="key == id-1"-->
+                        <div class="top_sec">
+                            <h2>BOOKING STATUS: <span>ACCEPTED</span></h2>
+                        </div>
+                        <div class="bottom_confo">
+                            <p>OFFER CONFIRMATION #: <strong>{{hotel.conformation}}</strong></p>
+                            <p>HOTEL CONFIRMATION #: <strong><span ng-show="hotel.hotel_confo != ''">{{hotel.hotel_confo}}</span><span ng-show="hotel.hotel_confo == ''">PENDING</span></strong></p>
+                        </div>
+                        <!--<div class="detail">
+<p><em>Hotel Name:</em><span>{{hotel.Name}}</span></p>
+<div class="more_detail">
+<p><em>Offer Total:</em><span><b>${{hotel.ammount}}</b></span></p>
+<p><em>Per Day:</em><span><b ng-init="itemTotal = hotel.ammount /hotel.night">${{itemTotal}}</b></span></p>
+<p><em>Check-In Date:</em><span>{{hotel.Arrival*1000 | date:'EEEE, MMM d'}}</span></p>
+<p><em>Check-Out Date:</em><span>{{hotel.cod*1000 | date:'EEEE, MMM d'}}</span></p>
+<p><em># of Guests:</em><span>{{hotel.guest}}</span></p>
+<p><em># of Beds:</em><span>{{hotel.bed}}</span></p>
+<p><em>Directions:</em><span><a href="javascript:void(0)" class="map_open" data-maps="http://maps.google.com/maps?q=loc:{{hotel.Latitude}},{{hotel.Longitude}}">Go to Map</a></span></p>
+</div>
+<div class="other_detail">
+<p>You will receive a phone call from the Hotel 
+to Guarantee your Stay*, or call now to complete 
+booking securely at <a href="javaascript:void(0)">{{hotel.Phone}}</a></p>
+<label>*If Offer is not guaranteed by Hotel, your offer and room will be cancelled at 6pm on the date of arrival.</label>
+</div>
+<a href="javascript:void(0)" class="show_more">Show Less <img src="img/arrow_btn.png" alt=""></a>
+</div>-->
+                        <!--<div class="left_side">
+<p><strong>This Hotel Choose You:</strong></p>
+<p>{{hotel.Name}}<br>
+{{hotel.address}} <br>
+<p><strong>Phone: </strong><a href="#">{{hotel.Phone}}</a></p>
+<a href="http://maps.google.com/maps?q=loc:{{hotel.Latitude}},{{hotel.Longitude}}">Get Directions</a>
+</div>
+<div class="right_side">
+<p ng-init="itemTotal = hotel.ammount /hotel.night">Amount Per Night: $ {{itemTotal | number:2}}</p>
+<p>Day to Stay: {{hotel.night}}</p>
+<p>Amount Total: $ {{hotel.ammount}}</p>
+</div>-->
+                        <ion-option-button class="button-positive icon ion-android-archive" data-id="{{hotel.$id}}" ng-click="archive(hotel.$id)"></ion-option-button> 
+                    </ion-item>
+                    <ion-item class="accepted reject bdr_list" ng-if="hotel.reject == true" >
+                        <div>
+                            <div class="top_sec">
+                                <h2>BOOKING STATUS:<span> DECLINED <!--Offer Sent to:{{hotel.total}} Hotels--></span></h2>
+                                <!--<h3>OFFER SENT TO: {{hotel.total}}<span ng-if="hotel.total == 1"> Hotel</span><span ng-if="hotel.total != 1"> Hotels</span></h3>-->
+                                <h3>Location: {{hotel.city}},{{hotel.State}}</h3>
+                            </div>
+                            <div class="reject_cont">
+                                <!--<p><span>OFFER TOTAL: ${{hotel.ammount}}</span> | <span>PER DAY: ${{hotel.ammount / hotel.night | number:2}}</span></p>-->
+                                <!--<p><strong>City:</strong> {{hotel.city}} <strong> Length of Stay : </strong>{{hotel.night}} ,<strong>Rating: </strong>{{hotel.stars}} <strong>| Offer: </strong> </p>
+<p>{{hotel.room}} Rooms, {{hotel.guest}} Guest, {{hotel.bed}}bed</p>-->
+                            </div>
+                            <ion-option-button class="button-positive icon ion-android-archive" ng-click="archive(hotel.$id)" data-id="{{hotel.$id}}"></ion-option-button> 
+                        </div>
+                    </ion-item>
+                </div>
+            </ion-list>
+        </ion-content>
+    </form>
+</ion-view>
